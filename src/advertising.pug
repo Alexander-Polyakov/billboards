@@ -1,0 +1,116 @@
+include pug/project-settings.pug
+include pug/mixins/mixins.pug
+
+doctype html
+html
+    head(lang="en")
+        include pug/metatags.pug
+        +title('Главная')
+        include pug/styles.pug
+
+    body
+        .page
+            include pug/components/header
+
+            .preview-section
+                .preview-section__bg-line
+                .container.preview-section__container
+                    .preview-section__breadcrumbs
+                        nav.breadcrumbs.breadcrumbs_preview
+                            a(href='#').breadcrumbs__item Главная
+                            span.breadcrumbs__item Рекламные услуги
+
+                    .preview-section__content
+                        .preview-section__text-section
+                            .page-title-section
+                                h1.page-title.page-title-section__title Широкоформатная интерьерная печать
+                                .page-title-section__descr Собственное производство с новейшим японским и американским оборудованием, от мировых лидеров широкоформатной печати
+                        .preview-section__img-section
+                            img(src='../images/previews/preview3.png').preview-section__img
+
+            .st-section
+                .st-section__section
+                    .container.container_width_950
+                        h2.title.st-section__title Широкоформатная печать на баннере и ORACAL
+                        .st-text
+                            p Рекламно - производственная компания  «Город Рекламы» предлагает профессиональные услуги печати рекламных изображений на баннерах с помощью широкоформатной и интерьерной печати высокого качества. В нашем распоряжении - современное оборудование, позволяющее выполнять большие объёмы работы в короткие сроки, а также квалифицированные специалисты, знающие все нюансы технологических процессов.
+                .st-section__section
+                    .container
+                        .images-grid
+                            .images-grid__item
+                                .image-box
+                                    img(src='../images/previews/preview4.jpg').image-box__img
+                            .images-grid__item
+                                .image-box
+                                    img(src='../images/previews/preview5.jpg').image-box__img
+
+            .form-section
+                .form-section__main
+                    .container
+                        .form-section__title
+                            h2.title.title_bg-gradient Отличные цены на носители наружной рекламы
+                        .form-section__content
+                            .form-section__img-section
+                                img(src='../images/previews/preview2.png').form-section__img
+                            .form-section__form
+                                form.form
+                                    .form__section
+                                        .form__descr Наша задача - разместить Вашу наружную рекламу максимально эффективно и качественно
+                                    .form__section
+                                        .form__input-title Ваше имя:
+                                        input(type='text').form__input.st-input
+                                    .form__section
+                                        .form__input-title Ваше имя:
+                                        input(type='text').form__input.st-input
+                                    .form__section.form__section_tac
+                                        a(href='#').button
+                                            .button__bg
+                                            .button__content ПОЗВОНИТЕ МНЕ
+                                    .form__section
+                                        .form__info
+                                            | Нажимая кнопку, вы принимаете условия
+                                            |
+                                            a(href='#').form__info-link «Пользовательского соглашения»
+                                            |
+                                            | и даете
+                                            |
+                                            a(href='#').form__info-link «Согласие на обработку персональных данных»
+                .form-section__footer.color-bg-grid
+                    .color-bg-grid__item.color-bg-grid__item_orange
+                    .color-bg-grid__item.color-bg-grid__item_yellow
+                    .color-bg-grid__item.color-bg-grid__item_blue
+                    .color-bg-grid__item.color-bg-grid__item_darkblue
+
+            .st-section.st-section_bg-gray
+                .container.container_width_800
+                    h2.title.st-section__title Наши постоянные клиенты
+                    .clients-grid
+                        .clients-grid__item
+                            img(src='../images/clientage/client1.jpg').clients-grid__img
+                        .clients-grid__item
+                            img(src='../images/clientage/client2.jpg').clients-grid__img
+                        .clients-grid__item
+                            img(src='../images/clientage/client3.jpg').clients-grid__img
+                        .clients-grid__item
+                            img(src='../images/clientage/client4.jpg').clients-grid__img
+                        .clients-grid__item
+                            img(src='../images/clientage/client5.jpg').clients-grid__img
+                        .clients-grid__item
+                            img(src='../images/clientage/client6.jpg').clients-grid__img
+                        .clients-grid__item
+                            img(src='../images/clientage/client7.jpg').clients-grid__img
+                        .clients-grid__item
+                            img(src='../images/clientage/client8.jpg').clients-grid__img
+                        .clients-grid__item
+                            img(src='../images/clientage/client9.jpg').clients-grid__img
+                        .clients-grid__item
+                            img(src='../images/clientage/client10.jpg').clients-grid__img
+                        .clients-grid__item
+                            img(src='../images/clientage/client11.jpg').clients-grid__img
+                        .clients-grid__item
+                            img(src='../images/clientage/client12.jpg').clients-grid__img
+
+
+            include pug/components/footer
+
+        include pug/scripts.pug

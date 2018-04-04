@@ -1,0 +1,143 @@
+include pug/project-settings.pug
+include pug/mixins/mixins.pug
+
+doctype html
+html
+    head(lang="en")
+        include pug/metatags.pug
+        +title('Избранное')
+        include pug/styles.pug
+
+    body
+        .page
+            include pug/components/header
+
+            .st-section.st-section_first
+                .container
+                    nav.breadcrumbs
+                        a(href='#').breadcrumbs__item Главная
+                        span.breadcrumbs__item Карта рекламных поверхностей в Воронеже
+                    h2.title.title_tal.st-section__title-left Ваше избранное
+                    .favorites-list-box
+                        .favorites-list-box__list.favorites-list
+                            .favorites-list__item
+                                .favorites-list-item
+                                    .favorites-list-item__section
+                                        a(href='#').favorites-list-item__link ул. Кольцовская + ул. Комисоржевская
+                                    .favorites-list-item__section
+                                        .favorites-list-item__city Воронеж
+                                    .favorites-list-item__section
+                                        .favorites-list-item__side-title СТОРОНА
+                                    .favorites-list-item__section
+                                        .side-grid
+                                            .side-grid__item.side-grid__item_bg_red А
+                                            .side-grid__item Б
+                                    .favorites-list-item__section
+                                        .size-box 3х6
+                                    .favorites-list-item__section
+                                        .object-photos
+                                            a(href='./images/previews/preview2.png' data-fancybox='gallery').object-photos__button
+                                                img(src='./images/icons/camera.svg').object-photos__button-img
+                                            .object-photos__list
+                                                .object-photos__button(data-src='./images/previews/preview4.jpg' data-fancybox='gallery')
+                                                .object-photos__button(data-src='./images/previews/preview4.jpg' data-fancybox='gallery')
+                                                .object-photos__button(data-src='./images/previews/preview4.jpg' data-fancybox='gallery')
+                                    .favorites-list-item__section
+                                        .close-btn
+                                    .favorites-list-item__section
+                                        button.button-small.button-small_bg_red ЗАПРОС
+
+                            .favorites-list__item
+                                .favorites-list-item
+                                    .favorites-list-item__section
+                                        a(href='#').favorites-list-item__link ул. Кольцовская + ул. Комисоржевская
+                                    .favorites-list-item__section
+                                        .favorites-list-item__city Воронеж
+                                    .favorites-list-item__section
+                                        .favorites-list-item__side-title СТОРОНА
+                                    .favorites-list-item__section
+                                        .side-grid
+                                            .side-grid__item.side-grid__item_bg_red А
+                                            .side-grid__item Б
+                                    .favorites-list-item__section
+                                        .size-box 3х6
+                                    .favorites-list-item__section
+                                        .object-photos
+                                            a(href='./images/previews/preview2.png' data-fancybox='gallery').object-photos__button
+                                                img(src='./images/icons/camera.svg').object-photos__button-img
+                                            .object-photos__list
+                                                .object-photos__button(data-src='./images/previews/preview4.jpg' data-fancybox='gallery')
+                                                .object-photos__button(data-src='./images/previews/preview4.jpg' data-fancybox='gallery')
+                                                .object-photos__button(data-src='./images/previews/preview4.jpg' data-fancybox='gallery')
+                                    .favorites-list-item__section
+                                        .close-btn
+                                    .favorites-list-item__section
+                                        button.button-small ЗАПРОС
+
+                            .favorites-list__item
+                                .favorites-list-item
+                                    .favorites-list-item__section
+                                        a(href='#').favorites-list-item__link ул. Кольцовская + ул. Комисоржевская
+                                    .favorites-list-item__section
+                                        .favorites-list-item__city Воронеж
+                                    .favorites-list-item__section
+                                        .favorites-list-item__side-title СТОРОНА
+                                    .favorites-list-item__section
+                                        .side-grid
+                                            .side-grid__item.side-grid__item_bg_red А
+                                            .side-grid__item Б
+                                    .favorites-list-item__section
+                                        .size-box 3х6
+                                    .favorites-list-item__section
+                                        .object-photos
+                                            a(href='./images/previews/preview2.png' data-fancybox='gallery').object-photos__button
+                                                img(src='./images/icons/camera.svg').object-photos__button-img
+                                            .object-photos__list
+                                                .object-photos__button(data-src='./images/previews/preview4.jpg' data-fancybox='gallery')
+                                                .object-photos__button(data-src='./images/previews/preview4.jpg' data-fancybox='gallery')
+                                                .object-photos__button(data-src='./images/previews/preview4.jpg' data-fancybox='gallery')
+                                    .favorites-list-item__section
+                                        .close-btn
+                                    .favorites-list-item__section
+                                        button.button-small ЗАПРОС
+
+
+
+            .color-bg-grid
+                .color-bg-grid__item.color-bg-grid__item_darkblue
+                .color-bg-grid__item.color-bg-grid__item_blue
+                .color-bg-grid__item.color-bg-grid__item_yellow
+                .color-bg-grid__item.color-bg-grid__item_orange
+
+            .st-section.st-section_bg-gray.st-section_padding_50-0
+                .container
+                    .st-section__title
+                        .title.title_bg-gradient Отправить заявку
+                    form.form.st-section__form
+                        .form__section
+                            .form__input-title Ваше имя:
+                            input(type='text').form__input.st-input
+                        .form__section
+                            .form__input-title Ваш телефон:
+                            input(type='text').form__input.st-input
+                        .form__section
+                            .form__input-title Ваш E-mail:
+                            input(type='text').form__input.st-input
+                        .form__section
+                            .form__info.form__info_color_black
+                                | Нажимая кнопку, вы принимаете условия
+                                |
+                                a(href='#').form__info-link «Пользовательского соглашения»
+                                |
+                                | и даете
+                                |
+                                a(href='#').form__info-link «Согласие на обработку персональных данных»
+                        .form__section.form__section_tac
+                            a(href='#').button
+                                .button__bg
+                                .button__content ЗАЯВКА
+
+
+            include pug/components/footer
+
+        include pug/scripts.pug

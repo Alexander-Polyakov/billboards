@@ -1,0 +1,192 @@
+include pug/project-settings.pug
+include pug/mixins/mixins.pug
+
+doctype html
+html
+    head(lang="en")
+        include pug/metatags.pug
+        +title('Главная')
+        include pug/styles.pug
+
+    body
+        .page
+            .page__header
+                include pug/components/header
+
+            main.page__main
+                .preview-section
+                    img(src='./images/icons/preview-bg-line.svg').preview-section__bg-line
+                    .container.preview-section__container
+                        .preview-section__content
+                            .preview-section__text-section
+                                .page-title-section
+                                    h1.page-title.page-title-section__title Размещение </br>  рекламы </br> на щитах 3х6
+                                    .page-title-section__descr Размещения наружной рекламы по Воронежу и Воронежской области за считаные дни
+                                    ul.page-title-section__infographic.infographic-list
+                                        li.infographic-list__item.infographic-list-item
+                                            img(src='./images/icons/time.svg').infographic-list-item__icon
+                                            .infographic-list-item__text Подбора конструкций за 30 минут
+                            .preview-section__img-section
+                                img(src='./images/previews/preview1.png').preview-section__img
+
+                .st-section
+                    .container
+                        .infographic-grid
+                            .infographic-grid__item.infographic-grid-item
+                                img(src='./images/icons/infographic1.svg').infographic-grid-item__icon
+                                .infographic-grid-item__content
+                                    .infographic-grid-item__title Работаем по всей Воронежской области
+                                    .infographic-grid-item__descr Размещение наружной рекламы по всей Воронежской области, в нашей базе 800 рекламных плоскостей
+                            .infographic-grid__item.infographic-grid-item
+                                img(src='./images/icons/infographic2.svg').infographic-grid-item__icon
+                                .infographic-grid-item__content
+                                    .infographic-grid-item__title Комплексные услуги
+                                    .infographic-grid-item__descr Изготовление и обслуживание рекламных конструкций любых форматов
+                            .infographic-grid__item.infographic-grid-item
+                                img(src='./images/icons/infographic3.svg').infographic-grid-item__icon
+                                .infographic-grid-item__content
+                                    .infographic-grid-item__title Опыт работы более 8 лет
+                                    .infographic-grid-item__descr Более 8 лет размещаем рекламу своих клиентов на рекламных поверхностях
+                            .infographic-grid__item.infographic-grid-item
+                                img(src='./images/icons/infographic4.svg').infographic-grid-item__icon
+                                .infographic-grid-item__content
+                                    .infographic-grid-item__title Индивидуальный подход
+                                    .infographic-grid-item__descr Выполняем масштабные рекламные проекты и эфективно размещает рекламу локальных клиентов.
+                .map-section
+                    .map-section__header
+                        .container
+                            h2.title.map-section__title Предлагаем размещение рекламы
+                            .map-section__info-section
+                                .map-section__infographic
+                                    .map-section__infographic-item
+                                        img(src='./images/icons/map-infographic1.svg').map-section__infographic-icon
+                                        .map-section__infographic-content
+                                            .map-section__infographic-value 800
+                                            .map-section__infographic-descr РЕКЛАМНЫХ ПОВЕРХНОСТЕЙ
+                                    .map-section__infographic-item
+                                        img(src='./images/icons/map-infographic2.svg').map-section__infographic-icon
+                                        .map-section__infographic-content
+                                            .map-section__infographic-value 230
+                                            .map-section__infographic-descr ГОРОДОВ И НП ВОРОНЕЖСКОЙ ОБЛ.
+                                .map-section__select
+                                    .select
+                                        .select__title УТОЧНИТЕ ГОРОД РАЗМЕЩЕНИЯ
+                                        .select__input
+                                            .select-links
+                                                .select-links__current г. Воронеж
+                                                .select-links__dropbox
+                                                    a(href='#').select-links__link г. Воронеж
+                                                    a(href='#').select-links__link г. Воронеж
+                                                    a(href='#').select-links__link г. Воронеж
+                    .map-section__main
+                        #map.map
+                    .map-section__footer
+                        .map-section__footer-bg.color-bg-grid
+                            .color-bg-grid__item.color-bg-grid__item_orange
+                            .color-bg-grid__item.color-bg-grid__item_yellow
+                            .color-bg-grid__item.color-bg-grid__item_blue
+                        .container.map-section__footer-container
+                            a(href='#').button весь список
+
+                .st-section
+                    .container.container_width_1500
+                        h2.title.st-section__title Комплексный подход
+                        .infographic
+                            .infographic__item
+                                .infographic-item
+                                    img(src='./images/icons/infographic5.svg').infographic-item__icon
+                                    .infographic-item__text Интерьерная и широкоформатная печать
+                            .infographic__item
+                                .infographic-item
+                                    img(src='./images/icons/infographic6.svg').infographic-item__icon
+                                    .infographic-item__text Собственное производство рекламных щитов
+                            .infographic__item
+                                .infographic-item
+                                    img(src='./images/icons/infographic7.svg').infographic-item__icon
+                                    .infographic-item__text Разработка макетов
+                            .infographic__item
+                                .infographic-item
+                                    img(src='./images/icons/infographic8.svg').infographic-item__icon
+                                    .infographic-item__text Изготовление рекламных конструкций
+
+                .form-section
+                    .form-section__main
+                        .container
+                            .form-section__title
+                                h2.title.title_bg-gradient Отличные цены на носители наружной рекламы
+                            .form-section__content
+                                .form-section__img-section
+                                    img(src='./images/previews/preview2.png').form-section__img
+                                .form-section__form
+                                    form.form
+                                        .form__section
+                                            .form__descr Наша задача - разместить Вашу наружную рекламу максимально эффективно и качественно
+                                        .form__section
+                                            .form__input-title Ваше имя:
+                                            input(type='text').form__input.st-input
+                                        .form__section
+                                            .form__input-title Ваше имя:
+                                            input(type='text').form__input.st-input
+                                        .form__section.form__section_tac
+                                            a(href='#').button ПОЗВОНИТЕ МНЕ
+                                        .form__section
+                                            .form__info
+                                                | Нажимая кнопку, вы принимаете условия
+                                                |
+                                                a(href='#').form__info-link «Пользовательского соглашения»
+                                                |
+                                                | и даете
+                                                |
+                                                a(href='#').form__info-link «Согласие на обработку персональных данных»
+                    .form-section__footer.color-bg-grid
+                        .color-bg-grid__item.color-bg-grid__item_orange
+                        .color-bg-grid__item.color-bg-grid__item_yellow
+                        .color-bg-grid__item.color-bg-grid__item_blue
+                        .color-bg-grid__item.color-bg-grid__item_darkblue
+
+                .st-section.st-section_bg-gray
+                    .container.container_width_800
+                        h2.title.st-section__title Наши постоянные клиенты
+                        .clients-grid
+                            .clients-grid__item
+                                img(src='./images/clientage/client1.jpg').clients-grid__img
+                            .clients-grid__item
+                                img(src='./images/clientage/client2.jpg').clients-grid__img
+                            .clients-grid__item
+                                img(src='./images/clientage/client3.jpg').clients-grid__img
+                            .clients-grid__item
+                                img(src='./images/clientage/client4.jpg').clients-grid__img
+                            .clients-grid__item
+                                img(src='./images/clientage/client5.jpg').clients-grid__img
+                            .clients-grid__item
+                                img(src='./images/clientage/client6.jpg').clients-grid__img
+                            .clients-grid__item
+                                img(src='./images/clientage/client7.jpg').clients-grid__img
+                            .clients-grid__item
+                                img(src='./images/clientage/client8.jpg').clients-grid__img
+                            .clients-grid__item
+                                img(src='./images/clientage/client9.jpg').clients-grid__img
+                            .clients-grid__item
+                                img(src='./images/clientage/client10.jpg').clients-grid__img
+                            .clients-grid__item
+                                img(src='./images/clientage/client11.jpg').clients-grid__img
+                            .clients-grid__item
+                                img(src='./images/clientage/client12.jpg').clients-grid__img
+
+
+
+                .st-section
+                    .container.container_width_800
+                        h2.title.st-section__title Услуги по размещению наружной рекламы в Воронеже и Воронежской области
+                        .st-text
+                            p Основным видом деятельности нашей компании является размещение рекламы на поверхностях по Воронежу и Воронежской области. Наши специалисты обладают высокой квалификацией и помогут Вам разместить наиболее эффективную рекламу и сэкономить Ваш рекламный бюджет. Мы всегда подходим к своим клиентам с пониманием и стараемся максимально удовлетворить его потребности в повышении продаж, узнаваемости бренда или в цели донести до наибольшего количества людей нужную информацию.
+
+                                p Реклама на конструкциях на сегодняшний день является самым востребованным видом наружной рекламы. Это связано с ее большими размерами и размещением вдоль трасс, т.е. где большой поток потенциальных потребителей рекламируемых услуг на картинках. По данным социальных опросов, на изображения и информацию на рекламных щитах обращают 75% людей, именно из-за этого данный вид конструкций наиболее популярный у многих рекламодателей
+
+
+            include pug/components/footer
+
+
+        include pug/scripts.pug
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+        script(src='js/ymap.js')

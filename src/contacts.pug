@@ -1,0 +1,93 @@
+include pug/project-settings.pug
+include pug/mixins/mixins.pug
+
+doctype html
+html
+    head(lang="en")
+        include pug/metatags.pug
+        +title('Избранное')
+        include pug/styles.pug
+
+    body
+        .page
+            include pug/components/header
+
+            .st-section.st-section_first
+                .container
+                    nav.breadcrumbs
+                        a(href='#').breadcrumbs__item Главная
+                        span.breadcrumbs__item Карта рекламных поверхностей в Воронеже
+                    h2.title.title_tal.st-section__title-left Контакты
+                    .contacts
+                        .contacts__section
+                            .contacts-grid
+                                .contacts-grid__item
+                                    .contacts-item
+                                        .contacts-item__header АДРЕС
+                                        .contacts-item__content
+                                            img(src='./images/icons/contacts-address.svg').contacts-item__icon
+                                            .contacts-item__text г. Воронеж. ул. Пешестрелецкая д. 74
+                                .contacts-grid__item
+                                    .contacts-item
+                                        .contacts-item__header РЕЖИМ РАБОТЫ
+                                        .contacts-item__content
+                                            img(src='./images/icons/contacts-calendar.svg').contacts-item__icon
+                                            .contacts-item__text
+                                                .calendar-grid
+                                                    .calendar-grid__item
+                                                        .calendar-grid__line пн - пт
+                                                        .calendar-grid__line 8:00 - 18:00
+                                                    .calendar-grid__item
+                                                        .calendar-grid__line сб вс
+                                                        .calendar-grid__line выходной
+
+                                .contacts-grid__item
+                                    .contacts-item
+                                        .contacts-item__header телефоны
+                                        .contacts-item__content
+                                            img(src='./images/icons/contacts-phone.svg').contacts-item__icon
+                                            .contacts-item__text
+                                                .contacts-item__text-section
+                                                    a(href='#').contacts-link.contacts-link_fz_24
+                                                        .contacts-link__text +7 (473) 277-77-77
+                                                    a(href='#').contacts-link.contacts-link_fz_24
+                                                        .contacts-link__text +7 (906) 671-39-57
+                                                .contacts-item__text-section
+                                                    .contacts-links-grid
+                                                        a(href='#').contacts-link.contacts-links-grid__item.contacts-link_fz_20
+                                                            img(src='./images/icons/viber.svg').contacts-link__icon
+                                                            span.contacts-link__text viber
+                                                        a(href='#').contacts-link.contacts-links-grid__item.contacts-link_fz_20
+                                                            img(src='./images/icons/whatsapp.svg').contacts-link__icon
+                                                            span.contacts-link__text whatsapp
+                                .contacts-grid__item
+                                    .contacts-item
+                                        .contacts-item__header электронная почта
+                                        .contacts-item__content
+                                            img(src='./images/icons/contacts-mail.svg').contacts-item__icon
+                                            .contacts-item__text.contacts-item__text_ttn gor-reklamy@yandex.ru
+
+
+                        .contacts__section
+                            .requisites-box
+                                .requisites-box__text Реквизиты компании:
+                                a(href='#').requisites-box__button
+                                    img(src='./images/icons/contacts-printer.svg').requisites-box__button-icon
+                                    .requisites-box__button-text Скачать
+
+
+
+
+            .map-box
+                .map-box__title
+                    .title.title_bg-gradient объект на карте
+                #map.map
+
+
+            include pug/components/footer
+
+            include pug/scripts.pug
+            script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+            script(src='js/ymap.js')
+
+

@@ -1,0 +1,74 @@
+include pug/project-settings.pug
+include pug/mixins/mixins.pug
+
+doctype html
+html
+    head(lang="en")
+        include pug/metatags.pug
+        +title('Избранное')
+        include pug/styles.pug
+
+    body
+        .page
+            include pug/components/header
+
+            .st-section.st-section_first
+                .container
+                    nav.breadcrumbs
+                        a(href='#').breadcrumbs__item Главная
+                        a(href='#').breadcrumbs__item Карта рекламных поверхностей в Воронеже
+                        span.breadcrumbs__item Рекламный щит 3Х6 ул. Кольцовская + ул. Комиссаржевская
+                    h2.title.title_tal.st-section__title-left Рекламный щит 3Х6 ул. Кольцовская + ул. Комиссаржевская
+                    .object-card
+                        .object-card__preview-section
+                            .object-slider-box.js-slider
+                                .object-slider-box__header
+                                    .object-slider-box__title
+                                        | Сторона
+                                        |
+                                        span.js-slider-title А
+                                    a(href='#').object-slider-box__print
+                                        .object-slider-box__print-text РАСПЕЧАТАТЬ
+                                        img(src='./images/icons/card-printer.svg').object-slider-box__print-icon
+                                .object-slider-box__main
+                                    .object-slider-box__size 3х6
+                                    .object-slider
+                                        .object-slider__images
+                                            img(src='./images/previews/preview2.png' data-item='1').object-slider__image.js-slider-item.active
+                                            .object-slider__image.js-slider-item(data-item='2')
+                                            .object-slider__image.js-slider-item(data-item='3')
+                                        .object-slider__buttons
+                                            .object-slider__button.js-slider-button.active(data-item='1') A
+                                            .object-slider__button.js-slider-button(data-item='2') Б
+                                            .object-slider__button.js-slider-button(data-item='3') С
+                        .object-card__descr-section
+                            ul.object-card__list
+                                li.object-card__list-li Артикул: 345
+                                li.object-card__list-li Город: Воронеж
+                                li.object-card__list-li Размер: 3Х6
+                                li.object-card__list-li Тип: билборд (призма)
+                            .object-card__title Особенности
+                            .object-card__descr Билбор находится в район ЖД вокзала. Место с большим пешеходным и автомобильным трафиком. Имеет ночное освещение, ветрозащиту. Регулярная чистка шампунем.
+                            .object-card__button
+                                .button.button_large ОТПРАВИТЬ ЗАПРОС
+                            .object-card__favorites
+                                .favorites-button
+                                    input(type='checkbox').favorites-button__input
+                                    .favorites-button__state.favorites-button__state_state1
+                                        .favorites-button__text Добавить в избранное
+                                        img(src='./images/icons/star.svg').favorites-button__icon
+                                    .favorites-button__state.favorites-button__state_state2
+                                        .favorites-button__text Убрать из избранного
+                                        img(src='./images/icons/star-filled.svg').favorites-button__icon
+
+            .map-box
+                .map-box__title
+                    .title.title_bg-gradient объект на карте
+                #map.map
+
+
+            include pug/components/footer
+
+        include pug/scripts.pug
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+        script(src='js/ymap.js')

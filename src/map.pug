@@ -1,0 +1,159 @@
+include pug/project-settings.pug
+include pug/mixins/mixins.pug
+
+doctype html
+html
+    head(lang="en")
+        include pug/metatags.pug
+        +title('Избранное')
+        include pug/styles.pug
+
+    body
+        .page
+            include pug/components/header
+
+            .st-section.st-section_map.st-section_bg-gray
+                .container
+                    nav.breadcrumbs
+                        a(href='#').breadcrumbs__item Главная
+                        span.breadcrumbs__item Карта рекламных поверхностей в Воронеже
+                    h2.title.title_tal.st-section__title-left Аренда рекламных щитов в Воронеже
+                .objects
+                    .container.objects__container
+                        .objects__left
+                            .objects__left-header
+                                .objects__left-header-content СПИСОК ГОРОДОВ
+                            .objects__left-main
+                                .objects__left-main-content
+                                    ul.st-list
+                                        li.st-list__li
+                                            a(href='#').st-link
+                                                | Анна (
+                                                span.color-orange 34
+                                                | )
+                                        li.st-list__li
+                                            a(href='#').st-link
+                                                | Анна (
+                                                span.color-orange 34
+                                                | )
+                                        li.st-list__li
+                                            a(href='#').st-link
+                                                | Анна (
+                                                span.color-orange 34
+                                                | )
+                                        li.st-list__li
+                                            a(href='#').st-link
+                                                | Анна (
+                                                span.color-orange 34
+                                                | )
+                                        li.st-list__li
+                                            a(href='#').st-link
+                                                | Анна (
+                                                span.color-orange 34
+                                                | )
+                                        li.st-list__li
+                                            a(href='#').st-link
+                                                | Анна (
+                                                span.color-orange 34
+                                                | )
+                                        li.st-list__li
+                                            a(href='#').st-link
+                                                | Анна (
+                                                span.color-orange 34
+                                                | )
+                                        li.st-list__li
+                                            a(href='#').st-link
+                                                | Анна (
+                                                span.color-orange 34
+                                                | )
+                                        li.st-list__li
+                                            a(href='#').st-link
+                                                | Анна (
+                                                span.color-orange 34
+                                                | )
+                                        li.st-list__li
+                                            a(href='#').st-link
+                                                | Анна (
+                                                span.color-orange 34
+                                                | )
+                                        li.st-list__li
+                                            a(href='#').st-link
+                                                | Анна (
+                                                span.color-orange 34
+                                                | )
+                                        li.st-list__li
+                                            a(href='#').st-link
+                                                | Анна (
+                                                span.color-orange 34
+                                                | )
+                                        li.st-list__li
+                                            a(href='#').st-link
+                                                | Анна (
+                                                span.color-orange 34
+                                                | )
+                                        li.st-list__li
+                                            a(href='#').st-link
+                                                | Анна (
+                                                span.color-orange 34
+                                                | )
+                                        li.st-list__li
+                                            a(href='#').st-link
+                                                | Анна (
+                                                span.color-orange 34
+                                                | )
+                                        li.st-list__li
+                                            a(href='#').st-link
+                                                | Анна (
+                                                span.color-orange 34
+                                                | )
+                        .objects__right
+                            .objects__right-header
+                                .objects__right-header-content
+                                    .objects__right-header-section
+                                        form.search
+                                            input(type='text' placeholder='Поиск по названию').search__input
+                                            button.search__button
+                                                img(src='./images/icons/loupe.svg').search__button-img
+                                    .objects__right-header-section
+                                        a(href='#').button.button_small.button_not-active.objects__button  список
+                                        a(href='#').button.button_small.objects__button  карта
+                            .objects__right-map
+                                #map.map
+
+            .form-section.form-section_bg_gray
+                .form-section__main
+                    .container
+                        .form-section__title
+                            h2.title.title_bg-gradient Вниманию рекламодателей!
+                        .form-section__content
+                            .form-section__img-section
+                                img(src='./images/previews/preview2.png').form-section__img
+                            .form-section__form
+                                form.form.form_color_black
+                                    .form__section
+                                        .form__descr Актуальную сетку рекламных поверхностей, занятость и точные цены уточняйте у наших менеджеров
+                                    .form__section
+                                        .form__input-title Ваше имя:
+                                        input(type='text').form__input.st-input
+                                    .form__section
+                                        .form__input-title Ваше имя:
+                                        input(type='text').form__input.st-input
+                                    .form__section.form__section_tac
+                                        button.button
+                                            .button__bg
+                                            .button__content ПОЗВОНИТЕ МНЕ
+                                    .form__section
+                                        .form__info
+                                            | Нажимая кнопку, вы принимаете условия
+                                            |
+                                            a(href='#').form__info-link «Пользовательского соглашения»
+                                            |
+                                            | и даете
+                                            |
+                                            a(href='#').form__info-link «Согласие на обработку персональных данных»
+
+            include pug/components/footer
+
+        include pug/scripts.pug
+        script(src="//api-maps.yandex.ru/2.1/?lang=en_RU" type="text/javascript")
+        script(src='js/ymap.js' type="text/javascript")
