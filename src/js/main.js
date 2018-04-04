@@ -1,4 +1,17 @@
 $(document).ready(function() {
+    $('.js-objects-popup-toggle').click(function(){
+        var thisBlock = $(this).closest('.objects'),
+            ofl = $(this).offset().left;
+
+        if ($(window).outerWidth() > 992) {
+            thisBlock.find('.objects__popup').css('width', ofl + 270);
+        } else {
+            thisBlock.find('.objects__popup').stop().slideToggle(400);
+        }
+
+        thisBlock.toggleClass('popup-opened');
+    });
+
     $('.js-page-menu-open').click(function () {
         $('.js-page-menu').addClass("opened");
     });
