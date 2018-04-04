@@ -26,7 +26,7 @@ function init(){
 
     objectManager.objects.options.set({
         iconLayout: 'default#image',
-        iconImageHref: '../images/icons/marker.svg',
+        iconImageHref: './images/icons/marker.svg',
         iconImageSize: [24, 35],
         balloonContentLayout: MyBalloonContentLayoutClass
     });
@@ -36,7 +36,7 @@ function init(){
     map.geoObjects.add(objectManager);
 
     $.ajax({
-        url: "../json/data.json"
+        url: "json/data.json"
     }).done(function(data) {
         objectManager.add(data);
     });
