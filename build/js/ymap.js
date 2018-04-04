@@ -36,7 +36,7 @@ function init(){
     map.geoObjects.add(objectManager);
 
     $.ajax({
-        url: "../json/data.json"
+        url: "json/data.json"
     }).done(function(data) {
         objectManager.add(data);
     });
