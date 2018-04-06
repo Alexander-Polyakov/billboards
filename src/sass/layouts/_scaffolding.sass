@@ -28,6 +28,8 @@ body
     position: relative
     font-family: $ff-book
     color: #1f1f1f
+    &.ovh
+        overflow: hidden
 
 .container
     max-width: 1090px
@@ -45,6 +47,25 @@ body
     overflow: hidden
     position: relative
     min-width: 320px
+    &__overlay
+        left: 0
+        width: 100%
+        height: 100%
+        position: fixed
+        top: 0
+        display: none
+        z-index: 1000
+        background-color: #e9e9e9
+        opacity: 0.8
+    &__popups
+        left: 0
+        width: 100%
+        height: 100%
+        position: fixed
+        top: 0
+        display: none
+        pointer-events: none
+        z-index: 1500
     &__menu
         position: absolute
         left: -100%
@@ -59,7 +80,7 @@ body
     &__menu-close
         position: absolute
         right: 10px
-        top: 10px
+        top: 13px
         width: 30px
         height: 30px
         z-index: 300
@@ -68,6 +89,7 @@ body
         background: inherit
         cursor: pointer
         transform: rotate(45deg)
+        background: transparent
         &:before
             content: ''
             width: 100%
@@ -106,6 +128,95 @@ body
         border-bottom: 5px solid #323a42
         background-image: linear-gradient( to right, #ffcc00 0%, #ffcc00 70%, #fd6c21 70%, #fd6c21 100%)
         position: relative
+
+
+.popups
+    &__popups-wrapper
+        display: flex
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        overflow: auto
+        align-items: center
+        justify-content: center
+        padding: 0 10px
+    &__popup
+        width: 380px
+        display: none
+        pointer-events: auto
+        &_width_580
+            width: 580px
+
+
+.form-popup
+    padding: 45px 38px 20px
+    position: relative
+    color: #fff
+    background-color: #2c5b7f
+    &_pt_10
+        padding-top: 10px
+    &__title
+        font-size: 28px
+        text-align: center
+        margin-bottom: 5px
+        line-height: 1.2em
+        font-weight: 600
+        text-transform: uppercase
+        font-family: $ff-bold
+    &__subtitle
+        text-align: center
+        font-size: 16px
+        line-height: 1.2em
+        margin-bottom: 10px
+    &:before
+        content: ''
+        width: 240px
+        height: 4px
+        left: 50%
+        margin-left: -120px
+        position: absolute
+        top: 0
+        background-image: linear-gradient(to right,#ff7e00 0,#ff4200 100%)
+    &__phone
+        margin-bottom: 25px
+    &__close
+        position: absolute
+        right: 10px
+        top: 10px
+
+.close
+    width: 30px
+    height: 30px
+    transform: rotate(45deg)
+    cursor: pointer
+    &:before
+        content: ''
+        width: 100%
+        height: 4px
+        background-color: #ff7200
+        position: absolute
+        left: 0
+        top: 50%
+        margin-top: -2px
+    &:after
+        content: ''
+        width: 4px
+        height: 100%
+        background-color: #ff7200 
+        position: absolute
+        top: 0
+        left: 50%
+        margin-left: -2px
+    &:hover
+        &:before, &:after
+            background-color: #ff4200
+
+.popup-phone
+    &__text
+        font-size: 25px
+        font-family: $ff-bold
 
 .header-nav-grid
     display: flex
@@ -1028,7 +1139,7 @@ body
 
 .contacts-item
     &__header
-        font-size: 2.2vw
+        font-size: 25px
         font-family:  $ff-bold
         background-color: #f7c418
         padding: 10px
@@ -1037,14 +1148,14 @@ body
     &__content
         display: flex
         align-items: center
-        padding: 2vw 0 2vw 2vw
+        padding: 30px
     &__icon
-        width: 8vw
-        height: 8vw
-        margin-right: 3vw
+        width: 100px
+        height: 100px
+        margin-right: 30px
     &__text
         text-transform: uppercase
-        font-size: 1.8vw
+        font-size: 22px
         font-family: $ff-bold
         &_ttn
             text-transform: none
@@ -1066,9 +1177,9 @@ body
     display: flex
     align-items: center
     &_fz_24
-        font-size: 1.8vw
+        font-size: 24px
     &_fz_20
-        font-size: 1.5vw
+        font-size: 20px
     &__icon
         width: 30px
         height: 30px
@@ -1256,17 +1367,27 @@ body
         position: relative
         border: 4px solid #f7c418
         background-color: #bababa
-    &__image
+        overflow: hidden
+        cursor: pointer
+    &__image-item
         position: absolute
         left: 0
         top: 0
         width: 100%
         height: 100%
         opacity: 0
-        object-fit: cover
         transition: all 0.5s ease 0s
+        z-index: 10
         &.active
             opacity: 1
+            z-index: 30
+    &__image
+        width: 100%
+        height: 100%
+        object-fit: cover
+        position: absolute
+        left: 0
+        top: 0
     &__buttons
         display: flex
         justify-content: space-between
@@ -1488,6 +1609,9 @@ body
         height: 100%
 
 @media screen and (max-width: 992px)
+    .contacts-grid__item
+        width: 100%
+
     .st-list
         margin-top: -20px
         &__li
@@ -1557,6 +1681,8 @@ body
 
     .main-nav
         display: block
+        .main-nav-item:after
+            display: block
 
     .main-nav-item
         &.opened
@@ -1583,10 +1709,6 @@ body
             position: absolute
             top: auto
             margin-top: 0
-        &:last-child
-            margin-top: 20px
-            &:after
-                display: none
             
     .main-nav-item__link
         font-size: 24px
@@ -1673,6 +1795,14 @@ body
 
 
 @media screen and (max-width: 768px)
+    .popups__popups-wrapper
+        display: block
+        overflow: auto
+
+    .popups__popup
+        margin: 100px auto
+        width: 100%
+
     .pagination
         &__item
             font-size: 16px

@@ -77,5 +77,62 @@
                         a(href='#').dropmenu-list__link Изготовление рекламных конструкций
         li.main-nav__item.main-nav-item
             a(href='#').main-nav-item__link контакты
-        li.main-nav__item.main-nav-item.main-nav-item_dark
-            a(href='#').main-nav-item__link Связаться с менеджером
+
+
+.page__overlay.js-popups-overlay.js-close-popups.js-close-menu
+.page__popups.popups.js-popups
+    .popups__popups-wrapper
+        .popups__popup.popups__popup_width_580.form-popup.form-popup_pt_10(data-popup-name='order')
+            .form-popup__close.js-close-popups.close
+            .form-popup__title Оставьте заявку
+            .form-popup__subtitle Получите расчет <br/> стоимcти работ бесплатно
+            .form-popup__form.form.form
+                .form__section
+                    .form__input-title Ваше имя:
+                    input(type='text').form__input.st-input
+                .form__section
+                    .form__input-title Ваш телефон:
+                    input(type='text').form__input.st-input
+                .form__section
+                    .form__input-title Ваш E-mail:
+                    input(type='text').form__input.st-input
+                .form__section
+                    .form__info
+                        | Нажимая кнопку, вы принимаете условия
+                        |
+                        a(href='#').form__info-link «Пользовательского соглашения»
+                        |
+                        | и даете
+                        |
+                        a(href='#').form__info-link «Согласие на обработку персональных данных»
+                .form__section.form__section_tac
+                    a(href='#').button
+                        .button__bg
+                        .button__content ЗАЯВКА
+        .popups__popup.form-popup(data-popup-name='feedback')
+            .form-popup__close.js-close-popups.close
+            .form-popup__phone.popup-phone
+                .popup-phone__text (473) 33-34-35-6
+            .form-popup__form.form.form
+                .form__section
+                    .form__input-title Ваше имя:
+                    input(type='text').form__input.st-input
+                .form__section
+                    .form__input-title Ваш телефон:
+                    input(type='text').form__input.st-input
+                .form__section
+                    .form__input-title Ваш E-mail:
+                    input(type='text').form__input.st-input
+                .form__section
+                    .form__info
+                        | Нажимая кнопку, вы принимаете условия
+                        |
+                        a(href='#').form__info-link «Пользовательского соглашения»
+                        |
+                        | и даете
+                        |
+                        a(href='#').form__info-link «Согласие на обработку персональных данных»
+                .form__section.form__section_tac
+                    a(href='#').button
+                        .button__bg
+                        .button__content ЗАЯВКА

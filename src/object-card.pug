@@ -34,9 +34,12 @@ html
                                     .object-slider-box__size 3х6
                                     .object-slider
                                         .object-slider__images
-                                            img(src='./images/previews/preview2.png' data-item='1').object-slider__image.js-slider-item.active
-                                            .object-slider__image.js-slider-item(data-item='2')
-                                            .object-slider__image.js-slider-item(data-item='3')
+                                            a(href='./images/previews/preview2.png' data-fancybox='objects').object-slider__image-item.active
+                                                img(src='./images/previews/preview2.png' data-item='1').object-slider__image.js-slider-item
+                                            a(href='./images/previews/preview2.png' data-fancybox='objects').object-slider__image-item.js-preview-zoom
+                                                img(src='./images/icons/card-printer.svg' data-item='2').object-slider__image.js-slider-item
+                                            a(href='./images/previews/preview2.png' data-fancybox='objects').object-slider__image-item.js-preview-zoom
+                                                img(src='./images/previews/preview2.png' data-item='3').object-slider__image.js-slider-item
                                         .object-slider__buttons
                                             .object-slider__button.js-slider-button.active(data-item='1') A
                                             .object-slider__button.js-slider-button(data-item='2') Б

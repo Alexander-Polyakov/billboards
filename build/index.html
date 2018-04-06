@@ -56,7 +56,7 @@
                     </div>
                   </li>
                   <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="#">контакты</a></li>
-                  <li class="main-nav__item main-nav-item main-nav-item_dark"><a class="main-nav-item__link" href="#">Связаться с менеджером</a></li>
+                  <li class="main-nav__item main-nav-item main-nav-item_dark"><a class="main-nav-item__link js-open-popup" href="#" data-target-popup="feedback">Связаться с менеджером</a></li>
                 </ul>
               </div>
             </div>
@@ -342,8 +342,73 @@
             </div>
           </li>
           <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="#">контакты</a></li>
-          <li class="main-nav__item main-nav-item main-nav-item_dark"><a class="main-nav-item__link" href="#">Связаться с менеджером</a></li>
         </ul>
+      </div>
+      <div class="page__overlay js-popups-overlay js-close-popups js-close-menu"></div>
+      <div class="page__popups popups js-popups">
+        <div class="popups__popups-wrapper">
+          <div class="popups__popup popups__popup_width_580 form-popup form-popup_pt_10" data-popup-name="order">
+            <div class="form-popup__close js-close-popups close"></div>
+            <div class="form-popup__title">Оставьте заявку</div>
+            <div class="form-popup__subtitle">Получите расчет <br/> стоимcти работ бесплатно</div>
+            <div class="form-popup__form form form">
+              <div class="form__section">
+                <div class="form__input-title">Ваше имя:</div>
+                <input class="form__input st-input" type="text">
+              </div>
+              <div class="form__section">
+                <div class="form__input-title">Ваш телефон:</div>
+                <input class="form__input st-input" type="text">
+              </div>
+              <div class="form__section">
+                <div class="form__input-title">Ваш E-mail:</div>
+                <input class="form__input st-input" type="text">
+              </div>
+              <div class="form__section">
+                <div class="form__info">
+                  Нажимая кнопку, вы принимаете условия
+                  <a class="form__info-link" href="#">«Пользовательского соглашения»</a>
+                  и даете
+                  <a class="form__info-link" href="#">«Согласие на обработку персональных данных»</a>
+                </div>
+              </div>
+              <div class="form__section form__section_tac"><a class="button" href="#">
+                  <div class="button__bg"></div>
+                  <div class="button__content">ЗАЯВКА</div></a></div>
+            </div>
+          </div>
+          <div class="popups__popup form-popup" data-popup-name="feedback">
+            <div class="form-popup__close js-close-popups close"></div>
+            <div class="form-popup__phone popup-phone">
+              <div class="popup-phone__text">(473) 33-34-35-6</div>
+            </div>
+            <div class="form-popup__form form form">
+              <div class="form__section">
+                <div class="form__input-title">Ваше имя:</div>
+                <input class="form__input st-input" type="text">
+              </div>
+              <div class="form__section">
+                <div class="form__input-title">Ваш телефон:</div>
+                <input class="form__input st-input" type="text">
+              </div>
+              <div class="form__section">
+                <div class="form__input-title">Ваш E-mail:</div>
+                <input class="form__input st-input" type="text">
+              </div>
+              <div class="form__section">
+                <div class="form__info">
+                  Нажимая кнопку, вы принимаете условия
+                  <a class="form__info-link" href="#">«Пользовательского соглашения»</a>
+                  и даете
+                  <a class="form__info-link" href="#">«Согласие на обработку персональных данных»</a>
+                </div>
+              </div>
+              <div class="form__section form__section_tac"><a class="button" href="#">
+                  <div class="button__bg"></div>
+                  <div class="button__content">ЗАЯВКА</div></a></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>

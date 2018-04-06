@@ -44,4 +44,28 @@ $(document).ready(function() {
         $(this).addClass("active");
     });
 
+
+    $('.js-open-popup').click(function (e) {
+        e.preventDefault();
+        $('body').addClass('ovh');
+
+        var targetPopup = $(this).data('target-popup');
+
+
+        console.log(targetPopup);
+        $('.js-popups-overlay').fadeIn(400);
+        $('.js-popups').fadeIn(400);
+
+        $('[data-popup-name='+targetPopup+']').fadeIn(400);
+    });
+
+    $(".js-close-popups").click(function () {
+        $('body').removeClass('ovh');
+
+        $('.js-popups-overlay').fadeOut(400);
+        $('.js-popups').fadeOut(400);
+
+        $('[data-popup-name]').fadeOut(400);
+    });
+
 });
