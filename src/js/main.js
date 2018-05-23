@@ -1,4 +1,20 @@
 $(document).ready(function() {
+
+    $(".select-links__current").click(function () {
+        $(this).closest('.select-links').addClass("opened");
+    });
+
+
+    $(".select-links__link").click(function (e) {
+        e.preventDefault();
+        var thisText = $(this).text(),
+            thisBl = $(this).closest('.select-links')
+        thisBl.find('.select-links__current').text(thisText);
+        thisBl.removeClass('opened');
+
+    });
+
+
     $('.js-objects-popup-toggle').click(function(){
         var thisBlock = $(this).closest('.objects'),
             ofl = $(this).offset().left;

@@ -82,7 +82,7 @@ body
         right: 10px
         top: 13px
         width: 30px
-        height: 30px
+        height: 30px 
         z-index: 300
         outline: none
         border: none
@@ -650,6 +650,7 @@ body
         border: 3px solid #000
         position: relative
         background-color: #fff
+        cursor: pointer
         &:before
             content: ''
             +arr(10,8,#ff5c00,b)
@@ -684,7 +685,7 @@ body
             bottom: 0
             border: 3px solid #000
             position: absolute
-    &:hover
+    &.opened
         .select-links__dropbox
             display: block
 
@@ -1390,10 +1391,10 @@ body
         top: 0
     &__buttons
         display: flex
-        justify-content: space-between
     &__button
         cursor: pointer
         width: 31%
+        margin-right: 4%
         border-top: 10px solid #fff
         height: 60px
         line-height: 50px
@@ -1402,6 +1403,8 @@ body
         text-align: center
         background-color: #bababa
         transition: all 0.5s ease 0s
+        &:last-child
+            margin-right: 0
         &.active
             border-top: 10px solid #f7c418
             background-color: #f7c418
